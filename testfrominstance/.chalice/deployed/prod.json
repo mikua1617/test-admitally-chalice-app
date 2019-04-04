@@ -1,0 +1,39 @@
+{
+  "resources": [
+    {
+      "name": "run_reminder_role",
+      "resource_type": "iam_role",
+      "role_arn": "arn:aws:iam::944248393034:role/communication-prod-run_reminder",
+      "role_name": "communication-prod-run_reminder"
+    },
+    {
+      "name": "run_reminder",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:us-east-1:944248393034:function:communication-prod-run_reminder"
+    },
+    {
+      "name": "run_reminder-event",
+      "resource_type": "cloudwatch_event",
+      "rule_name": "communication-prod-run_reminder-event"
+    },
+    {
+      "name": "api_handler_role",
+      "resource_type": "iam_role",
+      "role_arn": "arn:aws:iam::944248393034:role/communication-prod-api_handler",
+      "role_name": "communication-prod-api_handler"
+    },
+    {
+      "name": "api_handler",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:us-east-1:944248393034:function:communication-prod"
+    },
+    {
+      "name": "rest_api",
+      "resource_type": "rest_api",
+      "rest_api_id": "9gxmj7u54i",
+      "rest_api_url": "https://9gxmj7u54i.execute-api.us-east-1.amazonaws.com/api/"
+    }
+  ],
+  "schema_version": "2.0",
+  "backend": "api"
+}
